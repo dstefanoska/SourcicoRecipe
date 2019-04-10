@@ -1,0 +1,68 @@
+p {
+    margin: 10px 0;
+}
+
+.main-header {
+    font-size: 30px;
+    display: inline-flex;
+}
+
+.cancel {
+    margin-right: 50px;
+}
+
+.action-button {
+    float: right;
+    font-size: 17px;
+    width: 150px;
+    margin-top: 10px;
+}
+  
+.header {
+    border-bottom: solid #CDD2DC 1px;
+}
+
+.data-label {
+    margin-bottom: 0px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.border-red {
+    border-bottom: solid #FF5252;
+    height: 3px;
+    left: 0;
+    width: 50px;
+}
+
+.content-label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.content-data {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.border-bottom {
+    border-bottom: solid #CDD2DC 1px;
+}
+
+.card .header {
+    padding: 20px !important;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.button-small {
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+}
+  

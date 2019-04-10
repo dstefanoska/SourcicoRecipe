@@ -1,0 +1,126 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <button class="btn btn-success new-article" [routerLink]="['/recipe/0']">
+          <i class="fas fa-plus" style="margin-right: 5px;"></i>
+          Add recipe
+        </button>
+      </div>
+      <div class="col-md-6">
+        <div class="ui left icon input" style="float: right">
+          <i class="search icon"></i>
+          <input autocomplete="off" type='text' class="search-input" placeholder='Search' (keyup)='getItems($event)' style="border-radius: 30px" />
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="row table-container">
+      <div class="col-md-12">
+        <ngx-datatable #table class="bootstrap" [rows]="recipies" [columnMode]="'force'" [headerHeight]="50"
+          [footerHeight]="50" [rowHeight]="'auto'" [limit]="20">
+          <ngx-datatable-column name="Id">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.id}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Name">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.name}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Source">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.source}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Number of ingredients">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.ingredients.length}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Ingredience">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.ingredients | transformIngredience}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Instructions">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.instructions | longTextEllipsis}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Preparation time">
+            <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+              <span (click)="sort()">{{column.name}}</span>
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <p id="row_text">{{row.prepTime | transformTime}}</p>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Open">
+            <ng-template let-column="column" ngx-datatable-header-template>
+              Open
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-success" (click)="open(row)">
+                <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>
+                Open
+              </button>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Delete">
+            <ng-template let-column="column" ngx-datatable-header-template>
+              Delete
+            </ng-template>
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-danger" (click)="openAreYouSure(row)">
+                <i class="fas fa-trash" style="margin-right: 5px;"></i>
+                Delete
+              </button>
+            </ng-template>
+          </ngx-datatable-column>
+        </ngx-datatable>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template let-modalSize="tiny" let-context let-modal="modal" #areYouSure>
+  <div class="header">Are you sure?</div>
+  <div class="content">
+    You are going to delete a recipe. Are you sure?
+  </div>
+  <div class="actions">
+    <div class="action">
+      <button class="btn btn-danger modal-button-deny action" (click)="modal.deny('denied')">
+        <i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>
+        Cancel
+      </button>
+    </div>
+    <div class="action">
+      <button type="submit" class="btn btn-success action" (click)="modal.approve('approve')">
+        <i class="fas fa-trash" style="margin-right: 5px;"></i>
+        Yes
+      </button>
+    </div>
+  </div>
+</ng-template>

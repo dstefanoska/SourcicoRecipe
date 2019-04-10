@@ -5,10 +5,35 @@
   <title>Recipes</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Animation library for notifications   -->
+  <link href="assets/css/animate.min.css" rel="stylesheet" />
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet" />
+  <!-- App style -->
+  <link href="assets/css/generalStyle.css" rel="stylesheet" />
+
+  <!-- Fonts and icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+  crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet" type='text/css'>
+
+  <!-- Semantic UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/semantic-ui-calendar/dist/calendar.min.css">
+  
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div id="loader">
+      <img src="assets/img/loader-preview.svg" alt="loading">
+    </div>
+  </app-root>
 </body>
 </html>

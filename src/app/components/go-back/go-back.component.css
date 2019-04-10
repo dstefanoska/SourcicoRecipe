@@ -1,0 +1,13 @@
+.go-back {
+  color: black;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.go-back:hover {
+  color: #FF5252;
+}
+
+.go-back i {
+  margin-right: 15px;
+}

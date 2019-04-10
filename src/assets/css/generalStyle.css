@@ -1,0 +1,282 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+#toast-container > div {
+    opacity: 1;
+}
+
+.modal {
+    bottom: auto;
+}
+
+.ui.input input:active, .ui.input input:focus {
+    border: 1px solid #FF5252 !important;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.btn-success {
+    background: #339362 !important;
+    color: white !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+  
+.btn-danger {
+    background: #FF5252 !important;
+    color: white !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.btn:disabled, .btn[disabled], .btn.disabled {
+    background: #B2B5BB  !important;
+}
+
+.modal-button-deny {
+    float: left;
+}
+
+.action {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Loading */
+#loadingScreen {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+/* Transparent Overlay */
+#loadingScreen:before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+#loadingScreen img {
+    width: 70px !important;
+}
+/* Loading END */
+
+/* NGX datatable */
+.ngx-datatable.bootstrap {
+box-shadow: none;
+font-size: 13px;
+}
+
+.ngx-datatable.bootstrap .datatable-header {
+height: unset !important;
+}
+
+.ngx-datatable.bootstrap .datatable-header .datatable-header-cell {
+vertical-align: bottom;
+padding: 0.75rem;
+border-bottom: 1px solid #d1d4d7;
+}
+
+.ngx-datatable.bootstrap
+.datatable-header
+.datatable-header-cell
+.datatable-header-cell-label {
+line-height: 24px;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row {
+padding: 0.75rem;
+vertical-align: top;
+border-radius: 3px;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row,
+.ngx-datatable.bootstrap
+.datatable-body
+.datatable-body-row.datatable-row-even {
+border: 1px solid #ffffff;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row:hover,
+.ngx-datatable.bootstrap
+.datatable-body
+.datatable-body-row.datatable-row-even:hover {
+border: 1px solid #FF5252;
+}
+
+.ngx-datatable.bootstrap
+.datatable-body
+.datatable-body-row {
+border-radius: 5px;
+background: white;
+margin: 5px 0px 5px 0px;
+}
+
+.ngx-datatable.bootstrap
+.datatable-body
+.datatable-body-row
+.datatable-body-cell {
+text-align: left;
+vertical-align: top;
+}
+
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row.active {
+background-color: #FF5252;
+color: #fff;
+}
+
+.ngx-datatable.bootstrap .datatable-footer {
+color: #ededed;
+margin-top: -1px;
+}
+
+.ngx-datatable.bootstrap .datatable-footer .page-count {
+line-height: 50px;
+height: 50px;
+padding: 0 1.2rem;
+color: #424242;
+font-weight: 800;
+font-size: 13px;
+text-transform: uppercase;
+}
+
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager {
+margin: 0 10px;
+vertical-align: top;
+}
+
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager ul li {
+margin: 10px 0px;
+}
+
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+ul
+li:not(.disabled).active
+a,
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+ul
+li:not(.disabled):hover
+a {
+color: #ffffff;
+background: #FF5252;
+font-weight: bold;
+border-radius: 50%;
+}
+
+.ngx-datatable .datatable-footer .datatable-pager .pager li a {
+cursor: pointer;
+display: inline-block;
+background: none;
+border: none;
+color: black;
+font-weight: 700;
+}
+
+.ngx-datatable.bootstrap .datatable-footer .datatable-pager a {
+height: 22px;
+min-width: 24px;
+line-height: 22px;
+padding: 0;
+border-radius: 3px;
+margin: 0 3px;
+text-align: center;
+vertical-align: top;
+text-decoration: none;
+vertical-align: bottom;
+color: #ededed;
+background-color: #FF5252;
+}
+
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell {
+margin: auto 10px;
+}
+
+.action-items .btn {
+margin: 0 20px;
+border-radius: 50px;
+}
+
+.ngx-datatable .datatable-body .datatable-body-row > div {
+align-items: center !important;
+top: 20%;
+}
+
+#row_text {
+    width: 90%;
+}
+
+.ngx-datatable *, .ngx-datatable *:before, .ngx-datatable *:after {
+margin-bottom: unset;
+margin-top: unset;
+}
+
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+.datatable-icon-left,
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+.datatable-icon-skip,
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+.datatable-icon-right,
+.ngx-datatable.bootstrap
+.datatable-footer
+.datatable-pager
+.datatable-icon-prev {
+font-size: 15px;
+}
+
+.datatable-icon-left:before {
+content: "<";
+}
+
+.datatable-icon-skip:before {
+content: ">>";
+}
+
+.datatable-icon-right:before {
+content: ">";
+}
+
+.datatable-icon-prev:before {
+content: "<<";
+}
+
+.ngx-datatable .datatable-header .datatable-header-cell .datatable-header-cell-template-wrap {
+    cursor: pointer;
+}
+
+/* NGX datatable END */
